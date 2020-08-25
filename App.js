@@ -13,6 +13,7 @@ import {StyleSheet, Text} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import Main from './src/Components/Main';
+import { THEME } from './src/Config/Theme';
 
 const Stack = createStackNavigator();
 
@@ -22,7 +23,7 @@ const App = () => {
       <Stack.Navigator
         screenOptions={{
           headerTintColor: '#fff',
-          headerStyle: {backgroundColor: '#00722d'},
+          headerStyle: {backgroundColor: THEME.main},
         }}>
         <Stack.Screen
           name="Main"
