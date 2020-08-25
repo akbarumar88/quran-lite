@@ -5,7 +5,7 @@ export default class Surah extends Component {
   render() {
     return (
       <View>
-        <Text>Test Surah</Text>
+        <Text>Test Juz</Text>
       </View>
     );
   }

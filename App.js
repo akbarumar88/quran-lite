@@ -14,7 +14,7 @@ import {
 
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-import Surah from './src/Components/Surah';
+import Main from './src/Components/Main';
 
 const Stack = createStackNavigator();
 
@@ -22,7 +22,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Surah" component={Surah} />
+        <Stack.Screen name="Main" component={Main} />
         {/* <Stack.Screen name="Juz" /> */}
       </Stack.Navigator>
     </NavigationContainer>
