@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Text, View} from 'react-native';
-import {TouchableNativeFeedback} from 'react-native-gesture-handler'
+import {TouchableNativeFeedback} from 'react-native-gesture-handler';
 import Resource from './Reusable/Resource';
 import LoadingFullScreen from './Reusable/LoadingFullScreen';
 import Limiter from './Reusable/Limiter';
@@ -48,19 +48,28 @@ export default class Surah extends Component {
         <View
           style={{
             flexDirection: 'row',
+            justifyContent: 'space-between',
             alignItems: 'center',
             paddingVertical: 12,
             paddingHorizontal: 24,
-            borderBottomWidth:1,
-            borderBottomColor:'#ddd',
+            borderBottomWidth: 1,
+            borderBottomColor: '#ddd',
           }}>
-          <Text>{number}.</Text>
-          <View style={{marginLeft: 24}}>
-            <Text style={{color: THEME.main, fontSize: 16}}>{englishName}</Text>
-            <Text>
-              {englishNameTranslation} ({numberOfAyahs})
-            </Text>
+          {/* Left Section */}
+          <View style={{flexDirection: 'row', alignItems: 'center'}}>
+            <Text>{number}.</Text>
+            <View style={{marginLeft: 24}}>
+              <Text style={{color: THEME.main, fontSize: 16}}>
+                {englishName}
+              </Text>
+              <Text>
+                {englishNameTranslation} ({numberOfAyahs})
+              </Text>
+            </View>
           </View>
+
+          {/* Nama Surat arab */}
+          <Text style={{fontSize: 16}}>{name}</Text>
         </View>
       </TouchableNativeFeedback>
     );
