@@ -81,7 +81,9 @@ export default class SurahDetail extends Component {
             paddingVertical: 20,
             paddingHorizontal: 20,
           }}>
-          <Text style={{fontSize: 32, fontFamily: ''}}>{text}</Text>
+          <Text style={{fontSize: 32, fontFamily: 'Othmani-Italic'}}>
+            {text}
+          </Text>
           <Text
             style={{
               marginTop: 16,
