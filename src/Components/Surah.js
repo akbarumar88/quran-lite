@@ -44,7 +44,7 @@ export default class Surah extends Component {
       revelationType,
     } = item;
     return (
-      <TouchableNativeFeedback onPress={_ => this.props.navigation.navigate('SurahDetail', {surahNumber:number})}>
+      <TouchableNativeFeedback onPress={_ => this.props.navigation.navigate('SurahDetail', {surahNumber:number,surahName:englishName})}>
         <View
           style={{
             flexDirection: 'row',
