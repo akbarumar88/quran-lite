@@ -81,13 +81,15 @@ export default class SurahDetail extends Component {
             paddingVertical: 20,
             paddingHorizontal: 20,
           }}>
-          <Text style={{fontSize: 32}}>{text}</Text>
+          <Text style={{fontSize: 32, fontFamily: ''}}>{text}</Text>
           <Text
             style={{
               marginTop: 16,
               fontSize: 16,
               color: '#444',
               lineHeight: 24,
+              // fontStyle: 'italic',
+              fontFamily: 'OpenSans-Italic',
             }}>
             {numberInSurah}. {textIndonesia}
           </Text>
