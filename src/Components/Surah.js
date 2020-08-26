@@ -10,7 +10,7 @@ const BASE = 'http://api.alquran.cloud/v1';
 export default class Surah extends Component {
   render() {
     return (
-      <View style={{flex: 1}}>
+      <View style={{flex: 1,backgroundColor:'#fff'}}>
         <Resource url={`${BASE}/surah`}>
           {({loading, error, payload}) => {
             if (loading) return <LoadingFullScreen />;
@@ -44,13 +44,13 @@ export default class Surah extends Component {
       revelationType,
     } = item;
     return (
-      <TouchableNativeFeedback>
+      <TouchableNativeFeedback onPress={_ => this.props.navigation.navigate('SurahDetail', {surahNumber:number})}>
         <View
           style={{
             flexDirection: 'row',
             justifyContent: 'space-between',
             alignItems: 'center',
-            paddingVertical: 12,
+            paddingVertical: 15,
             paddingHorizontal: 24,
             borderBottomWidth: 1,
             borderBottomColor: '#ddd',
